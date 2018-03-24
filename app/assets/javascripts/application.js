@@ -11,4 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
+<<<<<<< HEAD
+=======
+//= require turbolinks
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
 //= require_tree .
