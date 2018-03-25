@@ -2,18 +2,24 @@
 <html>
   <head>
     <title>DndApp</title>
+    <%= stylesheet_link_tag    'application', media: 'all', "data-turbolinks-track" => true %>
+    <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-
-<<<<<<< HEAD
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-=======
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
->>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
   </head>
 
   <body>
+    <div>
+      <% if current_user %>
+        Signed in as <strong><%= current_user.name %></strong>
+          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+          <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+        <% end %>
+      </div>
+      <div>
     <%= yield %>
+    </div>
   </body>
 </html>
