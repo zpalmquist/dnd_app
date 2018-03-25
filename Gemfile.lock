@@ -24,7 +24,10 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+<<<<<<< HEAD
     active_designer (0.0.3)
+=======
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     activejob (5.1.5)
       activesupport (= 5.1.5)
       globalid (>= 0.3.6)
@@ -45,7 +48,11 @@ GEM
     bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
+<<<<<<< HEAD
     byebug (10.0.1)
+=======
+    byebug (10.0.0)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     capybara (2.18.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -53,7 +60,12 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+<<<<<<< HEAD
     coderay (1.1.2)
+=======
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -63,6 +75,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+<<<<<<< HEAD
     diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
@@ -72,19 +85,33 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.5.7)
+=======
+    erubi (1.7.1)
+    execjs (2.7.0)
+    ffi (1.9.23)
+    globalid (0.4.1)
+      activesupport (>= 4.2.0)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+<<<<<<< HEAD
     jwt (1.5.6)
     launchy (2.4.3)
       addressable (~> 2.3)
+=======
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
+<<<<<<< HEAD
     loofah (2.2.1)
+=======
+    loofah (2.2.0)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -94,6 +121,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+<<<<<<< HEAD
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     nio4r (2.3.0)
@@ -121,6 +149,11 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+=======
+    nio4r (2.3.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     public_suffix (3.0.2)
     puma (3.11.3)
     rack (2.0.4)
@@ -153,6 +186,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+<<<<<<< HEAD
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -171,6 +205,10 @@ GEM
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
     ruby_dep (1.5.0)
+=======
+    ruby_dep (1.5.0)
+    rubyzip (1.2.1)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -182,8 +220,19 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+<<<<<<< HEAD
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
+=======
+    selenium-webdriver (3.11.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.2)
+    spring (2.0.2)
+      activesupport (>= 4.2)
+    spring-watcher-listen (2.0.1)
+      listen (>= 2.7, < 4.0)
+      spring (>= 1.2, < 3.0)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -191,9 +240,19 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+<<<<<<< HEAD
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+=======
+    sqlite3 (1.3.13)
+    thor (0.20.0)
+    thread_safe (0.3.6)
+    tilt (2.0.8)
+    turbolinks (5.1.0)
+      turbolinks-source (~> 5.1)
+    turbolinks-source (5.1.0)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.8)
@@ -213,6 +272,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   active_designer
   bcrypt (~> 3.1.7)
   byebug
@@ -229,6 +289,22 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
+=======
+  bcrypt (~> 3.1.7)
+  byebug
+  capybara (~> 2.13)
+  coffee-rails (~> 4.2)
+  jbuilder (~> 2.5)
+  listen (>= 3.0.5, < 3.2)
+  puma (~> 3.7)
+  rails (~> 5.1.5)
+  sass-rails (~> 5.0)
+  selenium-webdriver
+  spring
+  spring-watcher-listen (~> 2.0.0)
+  sqlite3
+  turbolinks (~> 5)
+>>>>>>> 33fd95e368d6f8133a8f3dd6cd73f0f6c21ec552
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
