@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180401160057) do
+ActiveRecord::Schema.define(version: 20180401160601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,10 @@ ActiveRecord::Schema.define(version: 20180401160057) do
     t.bigint "race_id"
     t.index ["race_id"], name: "index_characters_on_race_id"
     t.index ["user_id"], name: "index_characters_on_user_id"
+  end
+
+  create_table "classes", force: :cascade do |t|
+    t.string "title"
   end
 
   create_table "races", force: :cascade do |t|
