@@ -9,6 +9,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+
 ActiveRecord::Schema.define(version: 20180324210244) do
 
   # These are extensions that must be enabled in order to support this database
@@ -22,4 +23,6 @@ ActiveRecord::Schema.define(version: 20180324210244) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
 end
