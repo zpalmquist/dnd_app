@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180401160713) do
+ActiveRecord::Schema.define(version: 20180401173320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alignments", force: :cascade do |t|
+    t.string "category"
+  end
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -29,8 +33,16 @@ ActiveRecord::Schema.define(version: 20180401160713) do
     t.bigint "user_id"
     t.bigint "race_id"
     t.bigint "class_id"
+    t.bigint "eye_color_id"
+    t.bigint "skin_color_id"
+    t.bigint "alignment_id"
+    t.bigint "hair_color_id"
+    t.index ["alignment_id"], name: "index_characters_on_alignment_id"
     t.index ["class_id"], name: "index_characters_on_class_id"
+    t.index ["eye_color_id"], name: "index_characters_on_eye_color_id"
+    t.index ["hair_color_id"], name: "index_characters_on_hair_color_id"
     t.index ["race_id"], name: "index_characters_on_race_id"
+    t.index ["skin_color_id"], name: "index_characters_on_skin_color_id"
     t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
@@ -38,8 +50,20 @@ ActiveRecord::Schema.define(version: 20180401160713) do
     t.string "title"
   end
 
+  create_table "eye_colors", force: :cascade do |t|
+    t.string "color"
+  end
+
+  create_table "hair_colors", force: :cascade do |t|
+    t.string "color"
+  end
+
   create_table "races", force: :cascade do |t|
     t.string "title"
+  end
+
+  create_table "skin_colors", force: :cascade do |t|
+    t.string "color"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,5 +77,6 @@ ActiveRecord::Schema.define(version: 20180401160713) do
   end
 
   add_foreign_key "characters", "classes"
+  add_foreign_key "characters", "hair_colors"
   add_foreign_key "characters", "races"
 end
