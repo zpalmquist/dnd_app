@@ -39,7 +39,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'pry'
   gem 'active_designer'
   gem "omniauth-google-oauth2", "~> 0.2.1"
