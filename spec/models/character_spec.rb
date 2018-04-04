@@ -18,6 +18,8 @@ describe Character, type: :model do
     it {should validate_presence_of :passive_perception}
     it {should validate_presence_of :initiative}
     it {should validate_presence_of :alignment}
+    it {should validate_presence_of :character_class_id}
+    it {should validate_presence_of :race_id}
   end
   context "relationships" do
     it {should belong_to :user}
