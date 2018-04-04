@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180324210244) do
+ActiveRecord::Schema.define(version: 20180402213707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "character_classes", force: :cascade do |t|
+    t.string "title"
+  end
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.float "height"
+    t.integer "weight"
+    t.string "eye_color"
+    t.integer "age"
+    t.string "skin_color"
+    t.string "hair_color"
+    t.integer "max_hit_points"
+    t.integer "ac"
+    t.integer "xp"
+    t.integer "speed"
+    t.integer "passive_perception"
+    t.integer "initiative"
+    t.string "alignment"
+    t.bigint "race_id"
+    t.bigint "class_id"
+    t.index ["class_id"], name: "index_characters_on_class_id"
+    t.index ["race_id"], name: "index_characters_on_race_id"
+  end
+
+  create_table "classes", force: :cascade do |t|
+    t.string "title"
+  end
+
+  create_table "races", force: :cascade do |t|
+    t.string "title"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider"
