@@ -9,6 +9,8 @@ describe Character, type: :model do
     # it {should validate_presence_of :age}
     # it {should validate_presence_of :skin_color}
     # it {should validate_presence_of :hair_color}
+    # I'm not sure these will be essential but rather optional traits for a character.
+    # They should be able to be nil.
     it {should validate_presence_of :max_hit_points}
     it {should validate_presence_of :ac}
     it {should validate_presence_of :xp}

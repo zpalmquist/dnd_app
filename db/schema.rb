@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404220031) do
+ActiveRecord::Schema.define(version: 20180404221202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "character_classes", force: :cascade do |t|
     t.string "title"
+    t.bigint "character_id"
+    t.index ["character_id"], name: "index_character_classes_on_character_id"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -56,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180404220031) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "character_classes", "characters"
   add_foreign_key "characters", "races"
   add_foreign_key "characters", "users"
 end
