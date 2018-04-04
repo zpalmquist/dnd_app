@@ -20,6 +20,6 @@ describe Character, type: :model do
   context "relationships" do
     it {should belong_to :user}
     it {should have_many :races}
-    it {should have_many :classes}
+    it {should have_many :character_classes}
   end
 end
