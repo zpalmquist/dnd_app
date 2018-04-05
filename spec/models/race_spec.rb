@@ -7,4 +7,7 @@ describe Race, type: :model do
   context "relationships" do
     it {should have_many :characters}
   end
+  context "creation" do
+    
+  end
 end
