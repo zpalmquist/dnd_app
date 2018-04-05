@@ -43,6 +43,7 @@ group :development, :test do
   gem 'pry'
   gem 'active_designer'
   gem "omniauth-google-oauth2", "~> 0.2.1"
+  gem 'figaro'
 end
 
 group :development do
