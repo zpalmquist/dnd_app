@@ -23,7 +23,7 @@ describe Character, type: :model do
   end
   context "relationships" do
     it {should belong_to :user}
-    it {should have_many :races}
-    it {should have_many :character_classes}
+    it {should belong_to :race}
+    it {should belong_to :character_class}
   end
 end

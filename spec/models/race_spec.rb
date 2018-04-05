@@ -5,6 +5,6 @@ describe Race, type: :model do
     it {should validate_presence_of :title}
   end
   context "relationships" do
-    it {should belong_to :character}
+    it {should have_many :characters}
   end
 end
