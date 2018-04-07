@@ -20,13 +20,14 @@ describe Character, type: :model do
   end
   context "creation" do
     it "should be able to be created" do
-      user = User.create!()
+      user = User.create!(provider: "google", uid: "1111", name: "me", email: "email@email.com",
+                          oauth_token: "token", oauth_expires_at: DateTime.now)
       character_class = CharacterClass.create!(title: "Ranger")
       race = Race.create!(title: "Elf")
       character = Character.create!(name: "Test Name", max_hit_points: 20, ac: 16,
                                     xp: 0, speed: 30, passive_perception: 2,
                                     initiative: 2, alignment: "LG", character_class_id: character_class.id,
-                                    race_id: race.id)
+                                    race_id: race.id, user: user)
       expect(character).to be_valid
     end
   end
