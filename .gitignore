@@ -19,3 +19,4 @@
 .byebug_history
 DS Store
 coverage
+config/application.yml
