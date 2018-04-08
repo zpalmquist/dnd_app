@@ -10,7 +10,7 @@ describe User, type: :model do
             email: "email@test.com"
           },
           credentials: {
-            oauth_token: "tokentoken",
+            token: "tokentoken",
             expires_at: DateTime.now
           }
     }
