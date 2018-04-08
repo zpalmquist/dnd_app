@@ -3,6 +3,6 @@ class Character < ApplicationRecord
                         :speed, :passive_perception, :initiative, :alignment,
                         :character_class_id, :race_id
   belongs_to :user
-  has_many :races
-  has_many :character_classes
+  belongs_to :race
+  belongs_to :character_class
 end

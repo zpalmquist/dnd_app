@@ -1,4 +1,5 @@
 class Race < ApplicationRecord
   validates_presence_of :title
-  belongs_to :character, optional: true
+
+  has_many :characters
 end

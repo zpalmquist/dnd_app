@@ -3,14 +3,6 @@ require 'rails_helper'
 describe Character, type: :model do
   context "validations" do
     it {should validate_presence_of :name}
-    # it {should validate_presence_of :height}
-    # it {should validate_presence_of :weight}
-    # it {should validate_presence_of :eye_color}
-    # it {should validate_presence_of :age}
-    # it {should validate_presence_of :skin_color}
-    # it {should validate_presence_of :hair_color}
-    # I'm not sure these will be essential but rather optional traits for a character.
-    # They should be able to be nil.
     it {should validate_presence_of :max_hit_points}
     it {should validate_presence_of :ac}
     it {should validate_presence_of :xp}
@@ -23,7 +15,20 @@ describe Character, type: :model do
   end
   context "relationships" do
     it {should belong_to :user}
-    it {should have_many :races}
-    it {should have_many :character_classes}
+    it {should belong_to :race}
+    it {should belong_to :character_class}
+  end
+  context "creation" do
+    it "should be able to be created" do
+      user = User.create!(provider: "google", uid: "1111", name: "me", email: "email@email.com",
+                          oauth_token: "token", oauth_expires_at: DateTime.now)
+      character_class = CharacterClass.create!(title: "Ranger")
+      race = Race.create!(title: "Elf")
+      character = Character.create!(name: "Test Name", max_hit_points: 20, ac: 16,
+                                    xp: 0, speed: 30, passive_perception: 2,
+                                    initiative: 2, alignment: "LG", character_class_id: character_class.id,
+                                    race_id: race.id, user: user)
+      expect(character).to be_valid
+    end
   end
 end
